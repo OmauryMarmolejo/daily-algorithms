@@ -13,7 +13,7 @@ function solution(statues) {
   }
 
   const sortedStatues = [...statues].sort((a, b) => a - b);
-  let requiredStatues = null;
+  let requiredStatues = 0;
 
   for (i = 0; i < sortedStatues.length - 1; i++) {
     requiredStatues += sortedStatues[i + 1] - sortedStatues[i] - 1;

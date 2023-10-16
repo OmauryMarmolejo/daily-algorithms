@@ -12,7 +12,6 @@ function solution(s1, s2) {
   let array_s2 = s2.split("");
 
   let count = 0;
-  console.log(array_s2);
   for (const letter of array_s1) {
     const index = array_s2.indexOf(letter);
 

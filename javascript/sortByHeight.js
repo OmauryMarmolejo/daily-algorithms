@@ -6,11 +6,11 @@
 // solution(a) = [-1, 150, 160, 170, -1, -1, 180, 190].
 
 function solution(a) {
-  const sorted_heights = a
+  const sortedHeights = a
     .filter((element) => element !== -1)
     .sort((a, b) => a - b);
 
   return a.map((element) => {
-    return element === -1 ? element : sorted_heights.shift();
+    return element === -1 ? element : sortedHeights.shift();
   });
 }

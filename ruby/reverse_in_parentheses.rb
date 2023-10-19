@@ -1,10 +1,17 @@
 def solution(inputString)
-  return "" if inputString == "()"
-  sub_string = inputString.match(/\(([^()]+)\)/)
-  
-  while sub_string    
-      inputString = inputString.gsub(sub_string[0], sub_string[1].reverse)
-      sub_string = inputString.match(/\(([^()]+)\)/)
+  stack = []
+  result = ""
+
+  input_string.each_char do |char|
+    if char == '('
+      stack.push(result) 
+      result = "" 
+    elsif char == ')'
+      result = stack.pop + result.reverse 
+    else
+      result << char 
+    end
   end
-  inputString
+
+  result
 end
